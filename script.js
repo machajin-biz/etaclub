@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("channel-container");
 
     // 1. 백엔드 통신: JSON 데이터베이스 파일 긁어오기 (Fetch API)
-    fetch("./channels.json")
+    fetch("/channels.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error("데이터베이스를 불러오는 데 실패했습니다.");
