@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("channel-container");
 
-    // 도메인 환경과 임시 주소 환경 모두에서 작동하도록 현재 도메인 기준 주소 계산
-    const jsonUrl = window.location.origin + "/channels.json";
+  
+    const jsonUrl = "./channels.json";
 
     // 캐시 방지를 위해 주소 뒤에 시간을 붙여 실시간으로 호출
     fetch(`${jsonUrl}?v=${new Date().getTime()}`)
