@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Harvard Business Review",
+    "url": "https://hbr.org",
+    "category": "Corporate Strategy"
+  },
+  {
+    "name": "Stanford GSB Insights",
+    "url": "https://www.gsb.stanford.edu/insights",
+    "category": "ETA & Search Funds"
+  },
+  {
+    "name": "Acquiring Minds",
+    "url": "https://acquiringminds.co",
+    "category": "ETA & Search Funds"
+  },
+  {
+    "name": "McKinsey Quarterly",
+    "url": "https://www.mckinsey.com/quarterly",
+    "category": "Corporate Strategy"
+  }
+]
