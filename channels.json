@@ -2,26 +2,31 @@
   {
     "name": "Harvard Business Review",
     "url": "https://hbr.org",
-    "category": "Corporate Strategy"
+    "category": "Corporate Strategy",
+    "image": "https://example.com/images/hbr.png"
   },
   {
     "name": "Stanford GSB Insights",
     "url": "https://www.gsb.stanford.edu/insights",
-    "category": "ETA & Search Funds"
+    "category": "ETA & Search Funds",
+    "image": "https://example.com/images/stanford-gsb.png"
   },
   {
     "name": "Acquiring Minds",
     "url": "https://acquiringminds.co",
-    "category": "ETA & Search Funds"
+    "category": "ETA & Search Funds",
+    "image": "https://example.com/images/acquiring-minds.png"
   },
   {
     "name": "McKinsey Quarterly",
     "url": "https://www.mckinsey.com/quarterly",
-    "category": "Corporate Strategy"
+    "category": "Corporate Strategy",
+    "image": "https://example.com/images/mckinsey.png"
   },
   {
     "name": "Grousbeck-Holloway Center for Entrepreneurial Studies",
     "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces",
-    "category":"Ent repreneurship"
+    "category": "Entrepreneurship",
+    "image": "https://example.com/images/grousbeck-holloway.png"
   }
 ]
