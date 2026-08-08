@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.href = channel.url;
                 card.target = "_blank";
                 card.rel = "noopener noreferrer";
-                card.className = "group relative flex flex-col justify-between bg-slate-900/60 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10";
-
+                card.className = "group relative flex flex-col justify-between bg-white hover:bg-gray-50/50 border border-gray-200 hover:border-indigo-300 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-200/50";
+                
                 // 기본 fallback SVG 아이콘
                 const defaultIconSvg = `
                     <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,23 +33,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 card.innerHTML = `
-                    <div>
-                        <!-- 상단: 썸네일 & 아이콘 -->
-                        <div class="flex items-start justify-between gap-4 mb-4">
-                            <div class="thumb-box w-14 h-14 rounded-xl bg-slate-800 border border-slate-700/80 overflow-hidden flex-shrink-0 flex items-center justify-center p-1 group-hover:border-indigo-500/40 transition-colors">
-                                ${
-                                    channel.image 
-                                        ? `<img src="${channel.image}" alt="${channel.name}" class="channel-img w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">`
-                                        : defaultIconSvg
-                                }
-                            </div>
-                            <div class="w-8 h-8 rounded-full bg-indigo-500/10 group-hover:bg-indigo-500 text-indigo-400 group-hover:text-white flex items-center justify-center transition-all">
-                                <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"></path>
-                                </svg>
-                            </div>
-                        </div>
+    <div>
+        <!-- 상단: 배너 형태의 이미지 영역 (플레이 버튼 제거) -->
+        <div class="thumb-box w-full h-36 rounded-xl bg-gray-100 border border-gray-200 overflow-hidden mb-4 flex items-center justify-center p-2 group-hover:border-indigo-400 transition-colors">
+            ${
+                channel.image 
+                    ? `<img src="${channel.image}" alt="${channel.name}" class="channel-img w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">`
+                    : defaultIconSvg
+            }
+        </div>
 
+        <!-- 카테고리 태그 -->
+        <span class="inline-block text-[11px] font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-0.5 rounded-md mb-2">
+            ${channel.category || 'General'}
+        </span>
+
+        <!-- 채널명 -->
+        <h3 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
+            ${channel.name}
+        </h3>
+    </div>
+
+    <!-- 하단 바로가기 -->
+    <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-medium text-gray-500 group-hover:text-indigo-600 transition-colors">
+        <span>채널 바로가기</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:translate-x-1 group-hover:text-indigo-600 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+    </div>
+`;
                         <!-- 카테고리 태그 -->
                         <span class="inline-block text-[11px] font-medium text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-md mb-2">
                             ${channel.category || 'General'}
